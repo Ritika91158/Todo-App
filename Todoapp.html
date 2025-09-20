@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+    .todo-container {
+      background: #ffffff;
+      padding: 25px 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      width: 400px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .input-row {
+      display: flex;
+      gap: 10px;
+    }
+    input {
+      flex: 1;
+      padding: 10px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      outline: none;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+    input:focus {
+      border-color: #667eea;
+      box-shadow: 0 0 5px rgba(102, 126, 234, 0.6);
+    }
+    #addBtn {
+      padding: 10px 16px;
+      background: #667eea;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    #addBtn:hover {
+      background: #5563c1;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+    li {
+      background: #f4f6fb;
+      margin: 8px 0;
+      padding: 10px 14px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 15px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    li:hover {
+      background: #e3e6f0;
+    }
+    li.completed {
+      text-decoration: line-through;
+      background: #d4edda;
+      color: #155724;
+    }
+    .delete {
+      background: #ff4d4d;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 6px 10px;
+      cursor: pointer;
+      font-size: 13px;
+      transition: 0.3s;
+    }
+    .delete:hover {
+      background: #cc0000;
+    }
+  </style>
+</head>
+<body>
+  <div class="todo-container">
+    <h1>Todo App</h1>
+    <div class="input-row">
+      <input placeholder="Enter your task" id="taskInput">
+      <button id="addBtn">Add</button>
+    </div>
+    <ul id="taskList">
+      <!-- Empty list, tasks will be added dynamically -->
+    </ul>
+  </div>
+  <script src="Todo.js"></script>
+</body>
+</html>
